@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="TestCases.TS_01_OrangeHRM_Login_Random_Credential">
+        <methods>
+          <include name="f1"/>
+          <include name="TS_01_OrangeHRM_Login_Invalid_Credential"/>
+          <include name="startReprt"/>
+          <include name="fn_Suit"/>
+          <include name="method"/>
+        </methods>
+      </class> <!-- TestCases.TS_01_OrangeHRM_Login_Random_Credential -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
