@@ -29,4 +29,8 @@ public class HomePage_Objects {
 
 	}
 
+	public void fn_gettext() throws IOException {
+		bs.getLinktext(ele_Welcome, "Logged in user");
+
+	}	
 }

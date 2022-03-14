@@ -173,20 +173,34 @@ public class BasicFunctions {
 		
 		try{
 			
-			boolean sts=driver.findElement(Locator).isDisplayed();
-			if (sts==true) {
-				SetUp.func_printlogPass("Successfully Verified:  "+strInput );
+			int sts=driver.findElements(Locator).size();
+			if (sts>0) {
+				SetUp.func_printlogPass("Successfully Verified Element exist:  "+strInput );
 			}else {
-				SetUp.func_printlogFail("Not able to Verify : "+Locator);
+				SetUp.func_printlogFail("Element does not exist : "+Locator);
 			}
 			
 		
 		} catch(Exception e) {
-			SetUp.func_printlogFail("Not able to Close the browser ");
-			SetUp.childTest.fail("Not able to Close the browser",
+			SetUp.func_printlogFail("Not able to Verify "+strInput);
+			SetUp.childTest.fail("Not able to Verify",
 					MediaEntityBuilder.createScreenCaptureFromBase64String(Screenshot()).build());
 		}
 		
 	}
 	
+	public void getLinktext(By Locator, String strInput) throws IOException {
+
+		try{
+			
+			String sts=driver.findElement(Locator).getText();
+				SetUp.func_printlogPass("Successfully get the text from element:  "+sts+ " : "+ strInput );			
+				
+		} catch(Exception e) {
+			SetUp.func_printlogFail("Element does not exist "+strInput);
+			SetUp.childTest.fail("Element does not exist",
+					MediaEntityBuilder.createScreenCaptureFromBase64String(Screenshot()).build());
+		}
+		
+	}
 }	

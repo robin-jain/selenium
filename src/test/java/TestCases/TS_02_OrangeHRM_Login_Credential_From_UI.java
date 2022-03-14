@@ -24,6 +24,7 @@ public class TS_02_OrangeHRM_Login_Credential_From_UI extends SetUp {
 		lO.Getuserid_passandLogin();
 		HomePage_Objects Hm=new HomePage_Objects(driver);
 		Hm.fn_verifyloginWelcome();
+		Hm.fn_gettext();
 		Hm.fn_logout();
 		bs.closebrower();
 		
